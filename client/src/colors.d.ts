@@ -25,6 +25,14 @@ export interface IColors {
       primary: String
       contrast: String
     }
+  },
+  general: {
+    red: String,
+    green: String
+    yellow: String
+    blue: String
+    purple: String
+    cyan: String
   }
 }
 
