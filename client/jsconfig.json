@@ -10,6 +10,7 @@
       "@services/*": ["./services/*"],
       "@state/*": ["./state/*"],
       "@features/*": ["./features/*"],
+      "@views/*": ["./views/*"],
       "@config": ["./config.js"],
       "@colors": ["./colors.js"],
       "@root/*": ["./*"]

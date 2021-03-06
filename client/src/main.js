@@ -1,4 +1,4 @@
-import { Flex } from 'lese'
 import { render } from 'react-dom'
+import Router from './router'
 
-render(<Flex xAlign>yo</Flex>, document.querySelector('#root'))
+render(<Router />, document.querySelector('#root'))

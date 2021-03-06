@@ -30,7 +30,8 @@
     "@emotion/styled": "^11.1.5",
     "lacer": "^0.0.1-rc4",
     "lese": "^0.7.1",
-    "preact": "^10.5.12"
+    "preact": "^10.5.12",
+    "raviger": "^2.0.1"
   },
   "devDependencies": {
     "chalk": "^4.0.0",
