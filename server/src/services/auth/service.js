@@ -1,8 +1,11 @@
 import { BadRequest, Forbidden, NotFound } from 'fejl'
 
 import { objectToToken, comparePassword } from '@helpers/auth'
-import { assertRequiredGenerator, assertTooShortGenerator } from '@helpers/asserts'
-
+import { assertRequiredGenerator
+  assertMustBeOfType,
+  assertTooLongGenerator,
+  assertTooShortGenerator,
+} from '@helpers/asserts'
 import User, { validatePassword } from '@models/User'
 
 import config from '@config'
