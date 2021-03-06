@@ -1,6 +1,7 @@
 import React from 'react'
 import { CKEditor } from '@ckeditor/ckeditor5-react'
 import BalloonEditor from '@ckeditor/ckeditor5-build-balloon'
+import styled from '@emotion/styled'
 import colors from '@colors'
 
 export const TextEditor = () => {
@@ -11,17 +12,16 @@ export const TextEditor = () => {
   }
 
   return (
-    <div style={{ height: 100 }} className="textEditor">
-      <CKEditor
-        editor={BalloonEditor}
-        data="<p>Enter your text here idiot</p>"
-        config={config}
-        onReady={(editor) => {
-          // You can store the "editor" and use when it is needed.
-          console.log('CKEditor is ready to use!', editor)
-        }}
-      />
-    </div>
+    <CKEditor
+      editor={BalloonEditor}
+      data="Enter your text here idiot"
+      config={config}
+      onReady={(editor) => {
+        // You can store the "editor" and use when it is needed.
+        console.log('CKEditor is ready to use!', CKEditor)
+        //editor.resize('100%', '350')
+      }}
+    />
   )
 }
 
