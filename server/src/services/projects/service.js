@@ -16,7 +16,7 @@ import { get } from 'mongoose'
 
 export default {
   async get(userId, {name}) {
-    return await Project.findOne({userId, name});
+    return (await Project.findOne({userId, name}).exec());
   },
 
   async getById({ projectId }) {
@@ -38,11 +38,11 @@ export default {
   },
 
   async update(projectId, {name, description, priority, status}){
-    const updateProject = this.getById({projectId});
+    const updateProject = await(this.getById({projectId}));
     if(name) updateProject.name = name;
     if(description) updateProject.description = description;
     if(priority) updateProject.priority = priority;
     if(status) updateProject.status = status;
-    return await updateProject.save();
+    return (await updateProject.save().exec());
   }
 }
