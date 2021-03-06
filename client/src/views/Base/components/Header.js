@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import { Flex } from 'lese'
 
 const HeaderContainer = styled(Flex)`
-  background-color: ${colors.backgrounds[800]};
+  background-color: ${colors.backgrounds[700]};
   padding: 4px 12px;
 `.withComponent('header')
 
