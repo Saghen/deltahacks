@@ -6,22 +6,20 @@ import styled from '@emotion/styled'
 import { Flex } from 'lese'
 
 const SidebarContainer = styled(Flex)`
-  background-color: ${colors.backgrounds[800]};
+  background-color: ${colors.backgrounds[700]};
   justify-content: space-between;
   right: 0px;
 `.withComponent('nav')
 
 const SideBarItem = styled(Flex)`
   padding: 20px 12px;
-  border-left: ${({ active }) => (active ? `6px` : '0px')} solid ${colors.backgrounds.primary};
-  background-color: ${({ secondary }) => (secondary ? colors.backgrounds[700] : colors.backgrounds[800])};
+  border-right: ${({ active }) => (active ? `6px` : '0px')} solid ${colors.backgrounds.primary};
+  background-color: ${colors.backgrounds[700]};
   cursor: pointer;
-  Text {
-    text-align: right;
-  }
 
   &:hover {
-    border-left-width: 6px;
+    border-right-width: 6px;
+    background-color: ${colors.backgrounds[800]};
   }
 `
 

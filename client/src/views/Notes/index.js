@@ -7,7 +7,7 @@ import { Flex, Grid } from 'lese'
 
 export const Notes = () => {
   return (
-    <Grid columns="1fr 240px">
+    <Grid columns="1fr 240px" style={{ overflowY: 'auto' }}>
       <TextEditor />
       <NoteSelector />
     </Grid>
