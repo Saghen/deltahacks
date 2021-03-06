@@ -18,6 +18,10 @@ const ProjectSchema = new mongoose.Schema({
     required: true,
     validate: [validateLocalStrategyProperty, 'A name must be provided'],
   },
+  description: {
+    type: String,
+    default: "",
+  },
   notes: {
     type: [{
       type: mongoose.Types.ObjectId,
@@ -33,7 +37,7 @@ const ProjectSchema = new mongoose.Schema({
     default: []
   },
   properties: {
-    projectID: {
+    projectId: {
       type: mongoose.Types.ObjectId,
       index: true,
       required: true,
@@ -42,6 +46,10 @@ const ProjectSchema = new mongoose.Schema({
     priority: prioritySchema,
     // done=4, in progress=3, to-do=2, backlogged=1, cancelled=0
     status: statusSchema,
+    pinned:{
+      type: Boolean,
+      default: false,
+    },
   }
 })
 
