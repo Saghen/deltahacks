@@ -44,5 +44,10 @@ export default {
     if(priority) updateProject.priority = priority;
     if(status) updateProject.status = status;
     return (await updateProject.save().exec());
+  },
+
+  async delete(projectId){
+    const deleteProject = await(this.getById({projectId}));
+    await(deleteProject.delete().exec());
   }
 }
