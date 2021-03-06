@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@lib/*": ["./lib/*"],
+      "@logger": ["./lib/logger.js"],
+      "@middleware/*": ["./middleware/*"],
+      "@routes/*": ["./routes/*"],
+      "@services/*": ["./services/*"],
+      "@helpers/*": ["./helpers/*"],
+      "@models/*": ["./models/*"],
+      "@store/*": ["./store/*"],
+      "@cache/*": ["./cache/*"],
+      "@config": ["./config.js"],
+      "@constants": ["../../shared/constants.js"],
+      "@shared/*": ["../../shared/*"],
+      "@db/*": ["./db/*"],
+      "@root/*": ["./*"],
+    }
+  },
+  "exclude": ["node_modules"]
+}

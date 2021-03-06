@@ -1,0 +1,22 @@
+{
+  "env": "development",
+  "logger": {
+    "handleExceptions": false,
+    "console": {
+      "enabled": true,
+      "level": "debug"
+    },
+    "file": {
+      "enabled": true
+    }
+  },
+  "mongo": {
+    "host": "localhost",
+    "auth": {
+      "username": "root",
+      "password": "6423"
+    }
+  },
+  "auth": {
+  }
+}

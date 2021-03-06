@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": ["./components/*"],
+      "@controls/*": ["./controls/*"],
+      "@helpers/*": ["./helpers/*"],
+      "@icons/*": ["./icons/*"],
+      "@libs/*": ["./libs/*"],
+      "@services/*": ["./services/*"],
+      "@state/*": ["./state/*"],
+      "@features/*": ["./features/*"],
+      "@config": ["./config.js"],
+      "@colors": ["./colors.js"],
+      "@root/*": ["./*"]
+    },
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment"
+  }
+}

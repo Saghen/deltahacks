@@ -1,0 +1,27 @@
+{
+  "extends": ["standard", "prettier"],
+  "plugins": ["prettier", "jest"],
+  "parserOptions": {
+    "ecmaVersion": 2021
+  },
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "semi": "off",
+    "node/no-callback-literal": "off"
+  },
+  "globals": {
+    "globalThis": false, // means it is not writeable,
+    "DOMPurify": false
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.js"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}

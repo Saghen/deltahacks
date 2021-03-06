@@ -1,0 +1,67 @@
+@host = http://localhost:8081
+
+###
+
+GET {{host}}/users/get?userId=5ebf095b75a7d1f502756b3a HTTP/1.1
+content-type: application/json
+
+###
+
+GET {{host}}/users/list HTTP/1.1
+
+###
+
+PUT {{host}}/users/create HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "Liam",
+  "lastName": "Dyer",
+  "username": "Saghen",
+  "permissionLevel": 1
+}
+
+###
+
+PATCH {{host}}/users/update HTTP/1.1
+content-type: application/json
+
+{
+  "userId": "5ebf095b75a7d1f502756b3a",
+  "firstName": "Liam",
+  "lastName": "Dyer",
+  "permissionLevel": 0
+}
+
+###
+
+PUT {{host}}/users/add-children HTTP/1.1
+content-type: application/json
+
+{
+  "userId": "5ebf095b75a7d1f502756b3a",
+  "virtualOfficeIds": []
+}
+
+###
+
+DELETE {{host}}/users/remove-children HTTP/1.1
+content-type: application/json
+
+{
+  "userId": "5ebf095b75a7d1f502756b3a",
+  "virtualOfficeIds": []
+}
+
+###
+
+PATCH {{host}}/users/verification-code HTTP/1.1
+content-type: application/json
+
+{
+  "userId": "5ebf095b75a7d1f502756b3a"
+}
+
+###
+
+DELETE {{host}}/users/delete?userId=5ebf6dee7d72abb76744b183 HTTP/1.1

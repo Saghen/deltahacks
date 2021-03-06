@@ -1,0 +1,53 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/main.js",
+  "engines": {
+    "node": "^15.9.0"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production node scripts/build.js",
+    "dev": "node scripts/build.js",
+    "test": "jest",
+    "lint": "eslint --fix src && prettier --write \"src/**/*.js\"",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/styled": "^11.1.5",
+    "lacer": "^0.0.1-rc4",
+    "lese": "^0.7.1",
+    "preact": "^10.5.12"
+  },
+  "devDependencies": {
+    "chalk": "^4.0.0",
+    "esbuild": "^0.8.56",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-config-standard-jsx": "^10.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "husky": "^5.1.3",
+    "lint-staged": "^10.5.4",
+    "nodemon": "^2.0.2",
+    "prettier": "^2.2.1"
+  }
+}

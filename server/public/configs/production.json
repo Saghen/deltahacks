@@ -1,0 +1,17 @@
+{
+  "env": "production",
+  "domain": "cmdr-ops.com",
+  "clientDomain": "https://reporting.cmdr-ops.com",
+  "logger": {
+    "handleExceptions": true,
+    "console": {
+      "enabled": true,
+      "level": "debug"
+    },
+    "file": {
+      "enabled": true,
+      "level": "debug",
+      "filename": "production.log"
+    }
+  }
+}
