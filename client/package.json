@@ -28,7 +28,6 @@
   "license": "MIT",
   "dependencies": {
     "@ckeditor/ckeditor5-build-balloon": "^26.0.0",
-    "@ckeditor/ckeditor5-build-classic": "^26.0.0",
     "@ckeditor/ckeditor5-editor-balloon": "^26.0.0",
     "@ckeditor/ckeditor5-react": "^3.0.1",
     "@emotion/styled": "^11.1.5",
