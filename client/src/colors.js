@@ -27,6 +27,14 @@ export const lightTheme = {
       contrast: '#2d2d2d',
     },
   },
+  general: {
+    red: '#E06C75',
+    green: '#98C379',
+    yellow: '#E5C07B',
+    blue: '#61AFEF',
+    purple: '#C678DD',
+    cyan: '#56B6C2',
+  },
 }
 
 export const darkTheme = {
@@ -42,7 +50,7 @@ export const darkTheme = {
     900: '#2E3038',
     primary: '#3498DB',
     contrast: '#fff',
-    separator: '#ffffff26' // 15% opacity
+    separator: '#ffffff26', // 15% opacity
   },
   typography: {
     primary: '#e1e1e1',
@@ -54,6 +62,14 @@ export const darkTheme = {
       primary: '#fff',
       contrast: '#2d2d2d',
     },
+  },
+  general: {
+    red: '#E06C75',
+    green: '#98C379',
+    yellow: '#E5C07B',
+    blue: '#61AFEF',
+    purple: '#C678DD',
+    cyan: '#56B6C2',
   },
 }
 
