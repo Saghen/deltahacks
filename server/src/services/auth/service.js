@@ -1,7 +1,7 @@
 import { BadRequest, Forbidden, NotFound } from 'fejl'
 
 import { objectToToken, comparePassword } from '@helpers/auth'
-import { assertRequiredGenerator
+import { assertRequiredGenerator,
   assertMustBeOfType,
   assertTooLongGenerator,
   assertTooShortGenerator,
