@@ -6,7 +6,7 @@ function validateLocalStrategyProperty(property) {
 }
 
 const ProjectSchema = new mongoose.Schema({
-  UserId: {
+  userId: {
     type: mongoose.Types.ObjectId,
     required: true,
     index: true,
