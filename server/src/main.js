@@ -14,13 +14,6 @@ async function initServer() {
     await waitForLogger(logger.api)
     process.exit(1)
   })
-  const { createWSServer } = await import('@lib/ws-server').catch(async (err) => {
-    if (err instanceof SyntaxError) throw err
-    logger.websockets.error(err.message)
-    logger.websockets.error(err.stack)
-    await waitForLogger(logger.websockets)
-    process.exit(1)
-  })
 
   createAPIServer()
     .then((app) =>
@@ -34,17 +27,6 @@ async function initServer() {
       await waitForLogger(logger.api)
       process.exit(1)
     })
-
-  createWSServer().then((app) =>
-    app.listen(config.get('websockets.port'), async (token) => {
-      if (token)
-        return logger.websockets.info(`Listening on ${config.get('websockets.port')} in ${config.get('env')} mode`)
-      logger.websockets.error('Error while starting up the Websocket server')
-      logger.websockets.error(`Likely failed to listen on port ${config.get('websockets.port')}`)
-      await waitForLogger(logger.websockets)
-      process.exit(1)
-    })
-  )
 }
 
 initServer()
