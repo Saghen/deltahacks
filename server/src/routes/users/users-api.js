@@ -1,6 +1,5 @@
 import KoaRouter from 'koa-router'
 import { authMiddleware } from '@helpers/auth'
-
 import usersService from '@services/users/service'
 
 const router = new KoaRouter()
