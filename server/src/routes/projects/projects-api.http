@@ -1,0 +1,13 @@
+@host = http://localhost:8081
+
+###
+
+
+content-type: application/json
+
+###
+
+GET {{host}}/projects/ HTTP/1.1
+
+###
+
