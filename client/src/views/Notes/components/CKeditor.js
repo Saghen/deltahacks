@@ -28,7 +28,7 @@ export const TextEditor = () => {
         <TextAccent>#16</TextAccent>
         <CKEditor
           editor={BalloonEditor}
-          data="Enter your text here idiot"
+          data="Enter your text here"
           config={config}
           onReady={(editor) => {
             // You can store the "editor" and use when it is needed.
