@@ -1,6 +1,6 @@
 import KoaRouter from 'koa-router'
-import authMiddleware from '@helpers/auth'
 import projectsService from '@services/projects/service'
+import authMiddleware from '@helpers/auth'
 
 const router = new KoaRouter()
 
@@ -18,7 +18,7 @@ router.GET('/get-by-name', authMiddleware(), async (ctx) => {
   ctx.ok(await projectsService.getByName(ctx.query))
 })
 
-router.PUT('/list', authMiddleware(), async (ctx) => {
+router.PUT('/list', authMiddleware(), async (ctx) => { 
   ctx.ok(await projectsService.list(ctx.request.body))
 })
 
